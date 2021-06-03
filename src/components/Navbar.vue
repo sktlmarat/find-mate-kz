@@ -1,5 +1,5 @@
 <template>
-  <q-header bordered>
+  <q-header bordered class="bg-white">
     <q-toolbar>
       <q-avatar>
         <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
