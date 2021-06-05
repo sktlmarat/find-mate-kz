@@ -2,8 +2,9 @@
   <q-page padding>
     <div class="row justify-center">
       <div class="col-12 col-sm-7">
-        <h4 class=" text-bold">Найдите соседа по одному клику</h4>
+        <h4 class=" text-bold">Найдите сожителя по одному клику 😃</h4>
         <q-select
+          @input="findCity"
           :options="options"
           outlined
           v-model="text"
@@ -51,6 +52,9 @@ export default {
         // eslint-disable-next-line no-undef
         this.options = stringOptions.filter(v => v.toLowerCase().indexOf(needle) > -1)
       })
+    },
+    findCity (val) {
+      this.$router.push('search')
     }
   }
 }
