@@ -18,7 +18,7 @@
             <q-icon name="enhanced_encryption" />
           </template>
         </q-input>
-        <q-btn color="secondary" style="width: 100%; height: 40px" text-color="white" label="Войти"/>
+        <q-btn push color="secondary" style="width: 100%; height: 40px" text-color="white" label="Регистрация"/>
       </div>
     </div>
   </q-page>
