@@ -1,14 +1,27 @@
 <template>
   <q-page padding>
     <div class="row justify-center">
-      <div class="col-12 col-sm-6">
+      <div class="col-12 col-sm-5">
         <h4 class="text-bold text-primary" style="margin-bottom: 20px; margin-top: 10px;">Добавить Пост</h4>
         <q-input outlined v-model="email" label="Заголовок Поста" style="margin-bottom: 15px" />
+        <q-select
+          @input="findCity"
+          :options="options"
+          outlined
+          v-model="text"
+          use-input
+          transition-show="jump-up"
+          transition-hide="jump-up"
+          @filter="filterFn"
+          style="margin-bottom: 15px"
+          clearable
+          label="Выберите город">
+        </q-select>
         <p class="text-bold" style="font-size: 20px">Описание: </p>
         <q-editor
           style="margin-bottom: 20px"
           v-model="password"
-          min-height="5rem"
+          min-height="10rem"
           :toolbar="[
         [
           {
