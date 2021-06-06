@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="row justify-center">
       <div class="col-12 col-sm-7">
-        <h4 class=" text-bold">Найдите сожителя по одному клику 😃</h4>
+        <h4 class=" text-bold">Найдите <span class="text-secondary">сожителя</span> по одному клику 😃</h4>
         <q-select
           @input="findCity"
           :options="options"

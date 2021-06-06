@@ -21,11 +21,11 @@
         <q-separator style="margin-top: 30px"/>
         <q-card class="my-card" style="margin-top: 20px" >
           <q-card-section style="padding: 20px">
-            <h4 style="margin-top: 0px; margin-bottom: 10px; color: #0664F6; font-size: 24px">Ищу руммейта</h4>
+            <h4 style="margin-top: 0px; margin-bottom: 10px; color: #0664F6; font-size: 24px"><router-link to="/post" style="color: #0664F6; text-decoration: none">Ищу руммейта</router-link></h4>
             <p>Город: Алматы</p>
             <p>Дата заселения: 12.05.2021</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eaque eum quod. Animi asperiores at, deleniti eligendi et impedit minus officia repudiandae voluptatum! Commodi culpa deserunt impedit, libero maxime nesciunt!</p>
-            <q-btn flat color="secondary" no-caps label="Подробнее ->" class="q-mr-auto"/>
+            <q-btn to="/post" flat color="secondary" no-caps label="Подробнее ->" class="q-mr-auto"/>
           </q-card-section>
         </q-card>
 
