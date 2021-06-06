@@ -15,10 +15,11 @@
         </q-input>
         <q-btn push color="secondary" style="width: 100%; height: 40px" text-color="white" label="Войти" @click="login"/>
 
-        <q-btn icon="vk" color="primary" push style="width: 100%; height: 40px; margin-top: 15px" text-color="secondary" @click="login">
+        <q-btn icon="vk" color="primary" push style="width: 100%; height: 40px; margin-top: 15px; margin-bottom: 15px" text-color="secondary" @click="login">
           <vk style="width: 25px; height: 25px; margin-right: 10px" />
           <div>Авторизоваться через ВК</div>
         </q-btn>
+        <router-link to="/register" class="text-bold text-secondary">Зарегестрироваться -></router-link>
       </div>
     </div>
   </q-page>

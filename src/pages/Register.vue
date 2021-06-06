@@ -18,7 +18,8 @@
             <q-icon name="enhanced_encryption" />
           </template>
         </q-input>
-        <q-btn push color="secondary" style="width: 100%; height: 40px" text-color="white" label="Регистрация"/>
+        <q-btn push color="secondary" style="width: 100%; height: 40px; margin-bottom: 15px" text-color="white" label="Регистрация"/>
+        <router-link to="/login" class="text-bold text-secondary">Авторизация -></router-link>
       </div>
     </div>
   </q-page>

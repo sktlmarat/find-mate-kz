@@ -17,8 +17,8 @@
             <q-icon name="search"/>
           </template>
         </q-select>
+        <q-btn color="secondary" to="/add-post" push no-caps label="Добавить пост" style="margin-top: 20px"/>
 
-        <q-separator style="margin-top: 30px"/>
         <q-card class="my-card" style="margin-top: 20px" >
           <q-card-section style="padding: 20px">
             <h4 style="margin-top: 0px; margin-bottom: 10px; color: #0664F6; font-size: 24px"><router-link to="/post" style="color: #0664F6; text-decoration: none">Ищу руммейта</router-link></h4>

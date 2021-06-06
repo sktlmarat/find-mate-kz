@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <div class="row justify-center">
-      <div class="col-12 col-sm-7">
+      <div class="col-12 col-sm-7 q-px-md">
         <h4 class=" text-bold">Найдите <span class="text-secondary">сожителя</span> по одному клику 😃</h4>
         <q-select
           @input="findCity"
@@ -13,7 +13,7 @@
           transition-hide="jump-up"
           @filter="filterFn"
           clearable
-          label="Название города">
+          label="Выберите город">
           <template v-slot:before>
             <q-icon name="place"/>
           </template>
