@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 class="text-bold" style="margin-top: 30px">Популярные Города 🏢</h4>
+    <h4 class="text-bold" style="margin-top: 30px; margin-bottom: 30px">Популярные Города 🏢</h4>
     <div class="row q-col-gutter-lg">
       <div class="col-6 col-md-4">
         <router-link to="/search">

@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row justify-center">
+    <div class="row justify-center" v-if="$store.state.token">
       <div class="col-12 col-sm-5">
         <h4 class="text-bold text-primary" style="margin-bottom: 20px; margin-top: 10px;">Добавить Пост</h4>
         <q-input outlined v-model="email" label="Заголовок Поста" style="margin-bottom: 15px" />
@@ -71,6 +71,12 @@
         <q-input type="textarea" outlined v-model="email" placeholder="Телефон: 8 747 89*****" style="margin-bottom: 15px" />
         <q-btn push color="secondary" style="width: 100%; height: 50px; margin-bottom: 15px" text-color="white"
                label="Добавить Пост"/>
+      </div>
+    </div>
+    <div class="row justify-center" v-else>
+      <div class="col-12 col-sm-5">
+        <p class="text-bold" style="font-size: 20px">Вы должны авторизоваться чтобы добавлять посты</p>
+        <router-link to="/login" class="text-secondary text-bold" style="font-size: 20px">Авторизоваться -></router-link>
       </div>
     </div>
   </q-page>
