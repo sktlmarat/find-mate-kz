@@ -17,7 +17,8 @@ Vue.use(Vuex)
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     state: {
-      token: null
+      token: null,
+      cities: ['Нур-Султан', 'Алматы', 'Шымкент', 'Караганда', 'Актау', 'Атырау', 'Актобе', 'Семей', 'Усть-Каменогорск', 'Тараз', 'Костанай', ' Кызылорда', 'Павлодар', 'Петропавловск']
     },
     mutations: {
       addToken (state, token) {
@@ -32,6 +33,9 @@ export default function (/* { ssrContext } */) {
     getters: {
       token (state) {
         return state.token
+      },
+      cities (state) {
+        return state.cities
       }
     },
     // enable strict mode (adds overhead!)

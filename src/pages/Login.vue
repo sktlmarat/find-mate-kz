@@ -48,6 +48,9 @@ export default {
   },
   methods: {
     login () {
+      this.$q.loading.show({
+        delay: 400
+      })
       axios.post('https://find-mate-kz.herokuapp.com/auth/local', {
         identifier: this.email,
         password: this.password
@@ -56,10 +59,13 @@ export default {
           message: 'Вы успешно авторизовались',
           type: 'positive'
         })
+        this.$q.loading.hide()
         localStorage.setItem('token', res.data.jwt)
+        localStorage.setItem('uid', res.data.user.id)
         this.$store.commit('addToken', res.data.jwt)
         this.$router.push('/')
       }).catch(e => {
+        this.$q.loading.hide()
         this.$q.notify({
           message: 'Неверный логин или пароль',
           type: 'negative'

@@ -7,7 +7,7 @@
           @input="findCity"
           :options="options"
           outlined
-          v-model="text"
+          v-model="city"
           use-input
           transition-show="jump-up"
           transition-hide="jump-up"
@@ -33,7 +33,7 @@
 <script>
 import Cities from 'components/PopularCities'
 
-const stringOptions = ['Astana', 'Almaty', 'Semey', 'Aktau', 'Atyrau']
+const stringOptions = ['Нур-Султан', 'Алматы', 'Шымкент', 'Караганда', 'Актау', 'Атырау', 'Актобе', 'Семей', 'Усть-Каменогорск', 'Тараз', 'Костанай', ' Кызылорда', 'Павлодар', 'Петропавловск']
 export default {
   name: 'PageIndex',
   components: {
@@ -41,7 +41,7 @@ export default {
   },
   data () {
     return {
-      text: null,
+      city: null,
       options: stringOptions
     }
   },
@@ -54,7 +54,7 @@ export default {
       })
     },
     findCity (val) {
-      this.$router.push('search')
+      this.$router.push(`/search/${this.city}`)
     }
   }
 }

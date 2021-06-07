@@ -3,7 +3,7 @@
       <div class="col-12 col-sm-7 q-px-md">
         <q-select
           @input="findCity"
-          :options="options"
+          :options="$store.state.cities"
           outlined
           v-model="text"
           use-input
@@ -51,3 +51,27 @@
       </div>
     </div>
 </template>
+
+<script>
+export default {
+  name: 'PageIndex',
+  data () {
+    return {
+      city: this.$route.params.city,
+      search: null
+    }
+  },
+  methods: {
+    filterFn (val, update, abort) {
+      update(() => {
+        const needle = val.toLowerCase()
+        // eslint-disable-next-line no-undef
+        this.options = stringOptions.filter(v => v.toLowerCase().indexOf(needle) > -1)
+      })
+    },
+    findCity (val) {
+      this.$router.push('search')
+    }
+  }
+}
+</script>
