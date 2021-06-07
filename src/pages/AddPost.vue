@@ -31,8 +31,7 @@
           }
         ],
         ['bold', 'italic', 'strike', 'underline'],
-        ['hr'],
-        ['fullscreen'],
+        ['unordered', 'ordered'],
         [
           {
             label: $q.lang.editor.formatting,
