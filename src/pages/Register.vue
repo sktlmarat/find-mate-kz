@@ -3,7 +3,7 @@
     <div class="row justify-center">
       <div class="col-12 col-sm-3">
         <h4 class="text-bold text-primary" style="margin-bottom: 20px">Регистрация</h4>
-        <q-input outlined v-model="email" :dense="dense" label="Email" style="margin-bottom: 15px">
+        <q-input outlined type="email" v-model="email" :dense="dense" label="Email" style="margin-bottom: 15px">
           <template v-slot:prepend>
             <q-icon name="account_circle" />
           </template>

@@ -111,7 +111,7 @@ export default {
           description: this.description,
           contact_info: this.contact,
           city: this.city,
-          users: this.uid
+          user_id: this.uid
         }, {
           headers: {
             Authorization: `Bearer ${this.token}`
